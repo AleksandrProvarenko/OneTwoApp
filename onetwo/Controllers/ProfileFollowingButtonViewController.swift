@@ -1,18 +1,17 @@
 //
-//  ProfileFollowersButtonViewController.swift
+//  ProfileFollowingButtonViewControllers.swift
 //  onetwo
 //
-//  Created by Alex Provarenko on 07.11.2022.
+//  Created by Alex Provarenko on 08.11.2022.
 //
 
 import UIKit
 
-class ProfileFollowersButtonViewController: UIViewController {
-    
+class ProfileFollowingButtonViewController: UIViewController {
     
     private let mainTableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(ProfileFollowersButtonTableViewCell.self, forCellReuseIdentifier:ProfileFollowersButtonTableViewCell.identifier)
+        tableView.register(ProfileFollowingButtonTableViewCell.self, forCellReuseIdentifier:ProfileFollowingButtonTableViewCell.identifier)
         tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
@@ -35,8 +34,8 @@ class ProfileFollowersButtonViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         mainTableView.frame = view.bounds
+
     }
     
     //MARK: - configureNavigatonBar
@@ -63,13 +62,13 @@ class ProfileFollowersButtonViewController: UIViewController {
 
 //MARK: - extension maintTableView
 
-extension ProfileFollowersButtonViewController: UITableViewDataSource, UITableViewDelegate {
+extension ProfileFollowingButtonViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileFollowersButtonTableViewCell.identifier, for: indexPath) as? ProfileFollowersButtonTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileFollowingButtonTableViewCell.identifier, for: indexPath) as? ProfileFollowingButtonTableViewCell else { return UITableViewCell() }
         
         return cell
     }

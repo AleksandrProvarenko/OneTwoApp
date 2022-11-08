@@ -185,6 +185,9 @@ class ProfileViewController: UIViewController {
     }
     
     @objc func followingButtonTap() {
+        let controller = ProfileFollowingButtonViewController()
+        controller.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(controller, animated: true)
         print("followingButtonTap")
     }
     

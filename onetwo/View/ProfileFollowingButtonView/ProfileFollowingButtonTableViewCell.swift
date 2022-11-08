@@ -1,5 +1,5 @@
 //
-//  ProfileFollowersButtonTableViewCell.swift
+//  ProfileFollowingButtonTableViewCell.swift
 //  onetwo
 //
 //  Created by Alex Provarenko on 08.11.2022.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ProfileFollowersButtonTableViewCell: UITableViewCell {
-    
-    static let identifier = "ProfileFollowersButtonTableViewCell"
+class ProfileFollowingButtonTableViewCell: UITableViewCell {
+
+    static let identifier = "ProfileFollowingButtonTableViewCell"
     
     private let userAvatarImageViewButton: UIButton = {
         let button = UIButton(type: .custom)
-        button.setImage(UIImage(named: "profileImage"), for: .normal)
+        button.setImage(UIImage(named: "HeappyPeople"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFill
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.masksToBounds = true
@@ -25,7 +25,7 @@ class ProfileFollowersButtonTableViewCell: UITableViewCell {
     private let profileNameLabel: UILabel = {
         let nameLabel = UILabel()
         nameLabel.font = UIFont(name: "System", size: 18)
-        nameLabel.text = "TipsForLife"
+        nameLabel.text = "ForLife"
         nameLabel.textColor = .black
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         return nameLabel
@@ -79,5 +79,5 @@ class ProfileFollowersButtonTableViewCell: UITableViewCell {
             
         ])
     }
-    
+
 }
