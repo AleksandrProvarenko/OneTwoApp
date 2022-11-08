@@ -168,10 +168,28 @@ class ProfileViewController: UIViewController {
     
     func configureProfileImageButton() {
         profileAvatarImageButton.addTarget(self, action: #selector(profButtonTap), for: .touchUpInside)
+        followersCountButton.addTarget(self, action: #selector(followersButtonTap), for: .touchUpInside)
+        followingCountButton.addTarget(self, action: #selector(followingButtonTap), for: .touchUpInside)
+        likeCountButton.addTarget(self, action: #selector(likeButtonTap), for: .touchUpInside)
     }
     
     @objc func profButtonTap() {
-        print("Done")
+        print("profButtonTap")
+    }
+    
+    @objc func followersButtonTap() {
+        let controller = ProfileFollowersButtonViewController()
+        controller.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(controller, animated: true)
+        print("followersButtonTap")
+    }
+    
+    @objc func followingButtonTap() {
+        print("followingButtonTap")
+    }
+    
+    @objc func likeButtonTap() {
+        print("likeButtonTap")
     }
     
     //MARK: - Constraints
