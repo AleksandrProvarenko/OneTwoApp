@@ -104,18 +104,7 @@ class LoginViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
-    private let faceboockButton: UIButton = {
-       let button = UIButton()
-        button.configuration = .filled()
-        button.configuration?.baseForegroundColor = .white
-        button.configuration?.baseBackgroundColor = .systemFill
-        button.configuration?.image = UIImage(named: "faceboock")
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 5
-        return button
-    }()
-    
+        
     private let googleButton: UIButton = {
        let button = UIButton()
         button.configuration = .filled()
@@ -144,7 +133,6 @@ class LoginViewController: UIViewController {
         view.addSubview(loginWidthLabel)
         view.addSubview(leftLineLoginWidth)
         view.addSubview(rightLineLoginWidth)
-        view.addSubview(faceboockButton)
         view.addSubview(googleButton)
         
         hideKeyboardReconiser()
@@ -199,7 +187,7 @@ class LoginViewController: UIViewController {
             logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImage.heightAnchor.constraint(equalToConstant: 180),
             
-            emailTextFielad.topAnchor.constraint(equalTo: logoImage.bottomAnchor, constant: 100),
+            emailTextFielad.topAnchor.constraint(equalTo: logoImage.bottomAnchor, constant: 70),
             emailTextFielad.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             emailTextFielad.widthAnchor.constraint(equalToConstant: 300),
             emailTextFielad.heightAnchor.constraint(equalToConstant: 40),
@@ -227,29 +215,22 @@ class LoginViewController: UIViewController {
             dontHaveAccountButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 15),
             dontHaveAccountButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            loginWidthLabel.topAnchor.constraint(equalTo: dontHaveAccountButton.bottomAnchor, constant: 100),
+            loginWidthLabel.topAnchor.constraint(equalTo: dontHaveAccountButton.bottomAnchor, constant: 40),
             loginWidthLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            leftLineLoginWidth.topAnchor.constraint(equalTo: dontHaveAccountButton.bottomAnchor, constant: 110),
             leftLineLoginWidth.trailingAnchor.constraint(equalTo: loginWidthLabel.leadingAnchor, constant: -5),
             leftLineLoginWidth.centerYAnchor.constraint(equalTo: loginWidthLabel.centerYAnchor),
             leftLineLoginWidth.widthAnchor.constraint(equalToConstant: 70),
             leftLineLoginWidth.heightAnchor.constraint(equalToConstant: 1),
-            
-            rightLineLoginWidth.topAnchor.constraint(equalTo: dontHaveAccountButton.bottomAnchor, constant: 110),
+
             rightLineLoginWidth.leadingAnchor.constraint(equalTo: loginWidthLabel.trailingAnchor, constant: 5),
             rightLineLoginWidth.centerYAnchor.constraint(equalTo: loginWidthLabel.centerYAnchor),
             rightLineLoginWidth.widthAnchor.constraint(equalToConstant: 70),
             rightLineLoginWidth.heightAnchor.constraint(equalToConstant: 1),
             
-            faceboockButton.topAnchor.constraint(equalTo: loginWidthLabel.bottomAnchor, constant: 25),
-            faceboockButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 75),
-            faceboockButton.widthAnchor.constraint(equalToConstant: 130),
-            faceboockButton.heightAnchor.constraint(equalToConstant: 50),
-            
             googleButton.topAnchor.constraint(equalTo: loginWidthLabel.bottomAnchor, constant: 25),
-            googleButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -75),
-            googleButton.widthAnchor.constraint(equalToConstant: 130),
+            googleButton.centerXAnchor.constraint(equalTo: loginWidthLabel.centerXAnchor),
+            googleButton.widthAnchor.constraint(equalToConstant: 300),
             googleButton.heightAnchor.constraint(equalToConstant: 50)
             
         ])

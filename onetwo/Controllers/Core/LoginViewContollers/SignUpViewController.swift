@@ -115,17 +115,6 @@ class SignUpViewController: UIViewController {
         return view
     }()
     
-    private let faceboockButton: UIButton = {
-       let button = UIButton()
-        button.configuration = .filled()
-        button.configuration?.baseForegroundColor = .white
-        button.configuration?.baseBackgroundColor = .systemFill
-        button.configuration?.image = UIImage(named: "faceboock")
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 5
-        return button
-    }()
-    
     private let googleButton: UIButton = {
        let button = UIButton()
         button.configuration = .filled()
@@ -156,7 +145,6 @@ class SignUpViewController: UIViewController {
         view.addSubview(signUpWidthLabel)
         view.addSubview(leftLineSignUpWidth)
         view.addSubview(rightLineSignUpWidth)
-        view.addSubview(faceboockButton)
         view.addSubview(googleButton)
         
         hideKeyboardReconiser()
@@ -229,29 +217,22 @@ class SignUpViewController: UIViewController {
             signUpButton.heightAnchor.constraint(equalToConstant: 50),
             signUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            signUpWidthLabel.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant: 100),
+            signUpWidthLabel.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant: 50),
             signUpWidthLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            leftLineSignUpWidth.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant: 110),
             leftLineSignUpWidth.trailingAnchor.constraint(equalTo: signUpWidthLabel.leadingAnchor, constant: -5),
             leftLineSignUpWidth.centerYAnchor.constraint(equalTo: signUpWidthLabel.centerYAnchor),
-            leftLineSignUpWidth.widthAnchor.constraint(equalToConstant: 25),
+            leftLineSignUpWidth.widthAnchor.constraint(equalToConstant: 70),
             leftLineSignUpWidth.heightAnchor.constraint(equalToConstant: 1),
-            
-            rightLineSignUpWidth.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant: 110),
+        
             rightLineSignUpWidth.leadingAnchor.constraint(equalTo: signUpWidthLabel.trailingAnchor, constant: 5),
             rightLineSignUpWidth.centerYAnchor.constraint(equalTo: signUpWidthLabel.centerYAnchor),
-            rightLineSignUpWidth.widthAnchor.constraint(equalToConstant: 25),
+            rightLineSignUpWidth.widthAnchor.constraint(equalToConstant: 70),
             rightLineSignUpWidth.heightAnchor.constraint(equalToConstant: 1),
-            
-            faceboockButton.topAnchor.constraint(equalTo: signUpWidthLabel.bottomAnchor, constant: 25),
-            faceboockButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 75),
-            faceboockButton.widthAnchor.constraint(equalToConstant: 130),
-            faceboockButton.heightAnchor.constraint(equalToConstant: 50),
-            
+           
             googleButton.topAnchor.constraint(equalTo: signUpWidthLabel.bottomAnchor, constant: 25),
-            googleButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -75),
-            googleButton.widthAnchor.constraint(equalToConstant: 130),
+            googleButton.centerXAnchor.constraint(equalTo: signUpWidthLabel.centerXAnchor),
+            googleButton.widthAnchor.constraint(equalToConstant: 300),
             googleButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
