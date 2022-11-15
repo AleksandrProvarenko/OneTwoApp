@@ -171,6 +171,7 @@ class ProfileViewController: UIViewController {
         followersCountButton.addTarget(self, action: #selector(followersButtonTap), for: .touchUpInside)
         followingCountButton.addTarget(self, action: #selector(followingButtonTap), for: .touchUpInside)
         likeCountButton.addTarget(self, action: #selector(likeButtonTap), for: .touchUpInside)
+        chengeProfileButton.addTarget(self, action: #selector(chengeProfileTap), for: .touchUpInside)
     }
     
     @objc func profButtonTap() {
@@ -193,6 +194,11 @@ class ProfileViewController: UIViewController {
     
     @objc func likeButtonTap() {
         print("likeButtonTap")
+    }
+    
+    @objc func chengeProfileTap() {
+        let controller = ChengeProfileViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     //MARK: - Constraints
