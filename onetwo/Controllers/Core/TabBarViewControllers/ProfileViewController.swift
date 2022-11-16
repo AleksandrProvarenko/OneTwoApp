@@ -198,6 +198,7 @@ class ProfileViewController: UIViewController {
     
     @objc func chengeProfileTap() {
         let controller = ChengeProfileViewController()
+        controller.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -209,7 +210,7 @@ class ProfileViewController: UIViewController {
             profileBackgroundImage.topAnchor.constraint(equalTo: view.topAnchor),
             profileBackgroundImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             profileBackgroundImage.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            profileBackgroundImage.heightAnchor.constraint(equalToConstant: 270),
+            profileBackgroundImage.heightAnchor.constraint(equalToConstant: 300),
             
             profileView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
             profileView.widthAnchor.constraint(equalToConstant: 400),

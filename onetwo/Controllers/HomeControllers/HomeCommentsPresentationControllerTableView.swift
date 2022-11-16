@@ -134,6 +134,8 @@ extension HomeCommentsPresentationControllerTableView: UITableViewDelegate, UITa
     
 }
 
+//MARK: - PresentationControllerTableView
+
 extension HomeCommentsPresentationControllerTableView: HomeCommentsPresentationControllerDelegate {
     func userAvatarImageTap() {
         let vc = ProfileGuestViewController()
