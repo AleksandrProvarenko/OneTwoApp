@@ -40,7 +40,7 @@ class ChengeProfileViewController: UIViewController {
         view.layer.cornerRadius = 50
         return view
     }()
-    
+
     private let addNewPhotoButton: UIButton = {
         let button = UIButton(configuration: .filled())
         let largeConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .light, scale: .small)
@@ -55,7 +55,7 @@ class ChengeProfileViewController: UIViewController {
         button.layer.cornerRadius = 50
         return button
     }()
-    
+
     private let changePhotoLabel: UILabel = {
         let label = UILabel()
         label.text = "change photo"
@@ -64,7 +64,7 @@ class ChengeProfileViewController: UIViewController {
         label.font = .systemFont(ofSize: 15)
         return label
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "change profile"
@@ -74,12 +74,7 @@ class ChengeProfileViewController: UIViewController {
         view.addSubview(profileAvatarImageView)
         view.addSubview(addNewPhotoButton)
         view.addSubview(changePhotoLabel)
-        backgroundView.addSubview(profileBackgroundImageView)
-        profileBackgroundImageView.addSubview(profileAvatarImageView)
-        profileBackgroundImageView.addSubview(changePhotoLabel)
-        profileAvatarImageView.addSubview(addNewPhotoButton)
-        
-        
+
         configureConstraints()
         addButtonTarget()
     }
@@ -89,12 +84,11 @@ class ChengeProfileViewController: UIViewController {
     private func addButtonTarget() {
         addNewPhotoButton.addTarget(self, action: #selector(addNewPhotoButtonTap), for: .touchUpInside)
     }
-    
+
     @objc func addNewPhotoButtonTap() {
         print("addNewPhotoButtonTap")
     }
-    
-    
+
     //MARK: - Constraints
     
     private func configureConstraints() {
@@ -110,19 +104,18 @@ class ChengeProfileViewController: UIViewController {
             profileBackgroundImageView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor),
             profileBackgroundImageView.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor),
             
-            profileAvatarImageView.topAnchor.constraint(equalTo: profileBackgroundImageView.topAnchor, constant: 150),
-            profileAvatarImageView.centerXAnchor.constraint(equalTo: profileBackgroundImageView.centerXAnchor),
+            profileAvatarImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+            profileAvatarImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             profileAvatarImageView.heightAnchor.constraint(equalToConstant: 100),
             profileAvatarImageView.widthAnchor.constraint(equalToConstant: 100),
             
-            addNewPhotoButton.centerXAnchor.constraint(equalTo: profileBackgroundImageView.centerXAnchor),
+            addNewPhotoButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+            addNewPhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             addNewPhotoButton.widthAnchor.constraint(equalToConstant: 100),
             addNewPhotoButton.heightAnchor.constraint(equalToConstant: 100),
-            
-            changePhotoLabel.topAnchor.constraint(equalTo: addNewPhotoButton.bottomAnchor, constant: 10),
-            changePhotoLabel.centerXAnchor.constraint(equalTo: addNewPhotoButton.centerXAnchor)
-            
-            
+
+            changePhotoLabel.topAnchor.constraint(equalTo: profileAvatarImageView.bottomAnchor, constant: 10),
+            changePhotoLabel.centerXAnchor.constraint(equalTo: profileAvatarImageView.centerXAnchor)
             
         ])}
 }
