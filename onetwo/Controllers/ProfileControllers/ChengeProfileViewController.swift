@@ -9,6 +9,19 @@ import UIKit
 
 class ChengeProfileViewController: UIViewController {
     
+    //MARK: - created TableView
+    
+    private let mainTapleView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(ChangeProfileTableViewCell.self, forCellReuseIdentifier: ChangeProfileTableViewCell.identifier)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .white
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        tableView.alwaysBounceVertical = false
+        return tableView
+    }()
+    
     private let backgroundView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -40,7 +53,7 @@ class ChengeProfileViewController: UIViewController {
         view.layer.cornerRadius = 50
         return view
     }()
-
+    
     private let addNewPhotoButton: UIButton = {
         let button = UIButton(configuration: .filled())
         let largeConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .light, scale: .small)
@@ -55,7 +68,7 @@ class ChengeProfileViewController: UIViewController {
         button.layer.cornerRadius = 50
         return button
     }()
-
+    
     private let changePhotoLabel: UILabel = {
         let label = UILabel()
         label.text = "change photo"
@@ -64,7 +77,16 @@ class ChengeProfileViewController: UIViewController {
         label.font = .systemFont(ofSize: 15)
         return label
     }()
-
+    
+    private let titleTableViewLabel: UILabel = {
+       let label = UILabel()
+        label.font = .systemFont(ofSize: 13, weight: .medium)
+        label.text = "About you"
+        label.textColor = .darkGray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "change profile"
@@ -74,21 +96,27 @@ class ChengeProfileViewController: UIViewController {
         view.addSubview(profileAvatarImageView)
         view.addSubview(addNewPhotoButton)
         view.addSubview(changePhotoLabel)
+        view.addSubview(titleTableViewLabel)
+        view.addSubview(mainTapleView)
 
+        mainTapleView.delegate = self
+        mainTapleView.dataSource = self
+        
         configureConstraints()
         addButtonTarget()
     }
     
+
     //MARK: - Create button target
     
     private func addButtonTarget() {
         addNewPhotoButton.addTarget(self, action: #selector(addNewPhotoButtonTap), for: .touchUpInside)
     }
-
+    
     @objc func addNewPhotoButtonTap() {
         print("addNewPhotoButtonTap")
     }
-
+    
     //MARK: - Constraints
     
     private func configureConstraints() {
@@ -113,9 +141,39 @@ class ChengeProfileViewController: UIViewController {
             addNewPhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             addNewPhotoButton.widthAnchor.constraint(equalToConstant: 100),
             addNewPhotoButton.heightAnchor.constraint(equalToConstant: 100),
-
-            changePhotoLabel.topAnchor.constraint(equalTo: profileAvatarImageView.bottomAnchor, constant: 10),
-            changePhotoLabel.centerXAnchor.constraint(equalTo: profileAvatarImageView.centerXAnchor)
             
+            changePhotoLabel.topAnchor.constraint(equalTo: profileAvatarImageView.bottomAnchor, constant: 10),
+            changePhotoLabel.centerXAnchor.constraint(equalTo: profileAvatarImageView.centerXAnchor),
+            
+            titleTableViewLabel.topAnchor.constraint(equalTo: profileBackgroundImageView.bottomAnchor, constant: 20),
+            titleTableViewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            
+            mainTapleView.topAnchor.constraint(equalTo: titleTableViewLabel.bottomAnchor, constant: 20),
+            mainTapleView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 15),
+            mainTapleView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            mainTapleView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+
         ])}
+    
+}
+
+extension ChengeProfileViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ChangeProfileTableViewCell.identifier, for: indexPath) 
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = ProfileChangeNameViewController()
+        controller.modalPresentationStyle = .automatic
+        navigationController?.pushViewController(controller, animated: true)
+        mainTapleView.deselectRow(at: indexPath, animated: true)
+    }
+
+
 }
