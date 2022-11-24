@@ -89,7 +89,6 @@ class ChengeProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "change profile"
         view.backgroundColor = .white
         view.addSubview(backgroundView)
         view.addSubview(profileBackgroundImageView)
