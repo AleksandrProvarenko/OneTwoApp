@@ -11,6 +11,7 @@ class CommentsViewController: UIViewController {
     
     private let mainTableView: UITableView = {
         let tableView = UITableView()
+       // tableView.backgroundColor = .white
         tableView.register(CommentsTableViewCell.self, forCellReuseIdentifier: CommentsTableViewCell.identifier)
         return tableView
     }()
@@ -38,11 +39,10 @@ class CommentsViewController: UIViewController {
 
 extension CommentsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      
         let cell = tableView.dequeueReusableCell(withIdentifier: CommentsTableViewCell.identifier, for: indexPath) as! CommentsTableViewCell
         return cell
     

@@ -115,32 +115,31 @@ class CommentsTableViewCell: UITableViewCell {
             
             userAvatarImageView.topAnchor.constraint(equalTo: dateUnswerLabel.bottomAnchor, constant: 10),
             userAvatarImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
-            userAvatarImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             userAvatarImageView.widthAnchor.constraint(equalToConstant: 50),
             userAvatarImageView.heightAnchor.constraint(equalToConstant: 50),
-            
-            userNameWhoAnswerLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 35),
-            userNameWhoAnswerLabel.firstBaselineAnchor.constraint(equalTo: userAvatarImageView.firstBaselineAnchor),
-            userNameWhoAnswerLabel.leadingAnchor.constraint(equalTo: userAvatarImageView.leadingAnchor, constant: 60),
-            
-            videoThetWasUnswered.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+
+            userNameWhoAnswerLabel.topAnchor.constraint(equalTo: userAvatarImageView.topAnchor),
+            userNameWhoAnswerLabel.leadingAnchor.constraint(equalTo: userAvatarImageView.trailingAnchor, constant: 10),
+
+            videoThetWasUnswered.centerYAnchor.constraint(equalTo: userAvatarImageView.centerYAnchor),
             videoThetWasUnswered.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
-            videoThetWasUnswered.widthAnchor.constraint(equalToConstant: 60),
-            videoThetWasUnswered.heightAnchor.constraint(equalToConstant: 90),
-            
-            unsweredLabel.topAnchor.constraint(equalTo: userNameWhoAnswerLabel.bottomAnchor, constant: 5),
+            videoThetWasUnswered.widthAnchor.constraint(equalToConstant: 50),
+            videoThetWasUnswered.heightAnchor.constraint(equalToConstant: 70),
+
+            unsweredLabel.topAnchor.constraint(equalTo: userNameWhoAnswerLabel.bottomAnchor, constant: 3),
             unsweredLabel.leadingAnchor.constraint(equalTo: userNameWhoAnswerLabel.leadingAnchor),
-            
+
             unsweredMessageLaberl.topAnchor.constraint(equalTo: unsweredLabel.bottomAnchor, constant: 2),
             unsweredMessageLaberl.leadingAnchor.constraint(equalTo: unsweredLabel.leadingAnchor),
             unsweredMessageLaberl.trailingAnchor.constraint(equalTo: videoThetWasUnswered.leadingAnchor, constant: -5),
-            
+
             mainUserName.topAnchor.constraint(equalTo: unsweredMessageLaberl.bottomAnchor, constant: 7),
             mainUserName.leadingAnchor.constraint(equalTo: unsweredMessageLaberl.leadingAnchor, constant: 15),
-            
+
             mainUserComments.topAnchor.constraint(equalTo: mainUserName.bottomAnchor, constant: 2),
             mainUserComments.leadingAnchor.constraint(equalTo: mainUserName.leadingAnchor),
             mainUserComments.trailingAnchor.constraint(equalTo: videoThetWasUnswered.leadingAnchor, constant: -5),
+            mainUserComments.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
 
         ])
     }
