@@ -65,7 +65,6 @@ class ChangeProfileTableViewCell: UITableViewCell {
             userNameLabel.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
             
             navigationImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 3.5),
-//            navigationImage.topAnchor.constraint(equalTo: contentView.topAnchor),
             navigationImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
         ])
     }

@@ -115,7 +115,7 @@ class HomeVideoCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(commentsCountLabel)
         contentView.addSubview(favoriteButton)
         contentView.addSubview(favoriteCountLabel)
-        
+    
         configureConstraints()
         confugireButtons()
     }

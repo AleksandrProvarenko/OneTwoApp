@@ -13,7 +13,6 @@ class HomeViewController: UIViewController {
     let video: [Video] = Video.fetchVideo()
     var commentsPresController = HomeCommentsPresentationControllerTableView()
     
-   
     lazy var collectionVideoView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -35,7 +34,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         view.addSubview(collectionVideoView)
-        
         collectionVideoView.delegate = self
         collectionVideoView.dataSource = self
         
@@ -43,6 +41,7 @@ class HomeViewController: UIViewController {
         configureNavigationBar()
     }
     
+  
     //MARK: - CollectionViewDidLayoutSubviews
     
     override func viewDidLayoutSubviews() {
@@ -73,15 +72,13 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return video.count
-        
     }
     
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeVideoCollectionViewCell.identidier, for: indexPath) as! HomeVideoCollectionViewCell
-                
+            
             let video = video[indexPath.row]
             cell.configureVideo(with: video)
             cell.delegate = self
@@ -112,6 +109,7 @@ extension HomeViewController: HomeVideoCollectionViewCellDelegate {
     func didTapCommentsButton() {
         if let sheet = self.commentsPresController.sheetPresentationController {
             sheet.detents = [.medium()]
+            sheet.prefersGrabberVisible = true
         }
         
         present(self.commentsPresController, animated: true)

@@ -79,7 +79,7 @@ class ChengeProfileViewController: UIViewController {
     }()
     
     private let titleTableViewLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.font = .systemFont(ofSize: 13, weight: .medium)
         label.text = "About you"
         label.textColor = .darkGray
@@ -97,7 +97,7 @@ class ChengeProfileViewController: UIViewController {
         view.addSubview(changePhotoLabel)
         view.addSubview(titleTableViewLabel)
         view.addSubview(mainTapleView)
-
+//
         mainTapleView.delegate = self
         mainTapleView.dataSource = self
         
@@ -105,7 +105,6 @@ class ChengeProfileViewController: UIViewController {
         addButtonTarget()
     }
     
-
     //MARK: - Create button target
     
     private func addButtonTarget() {
@@ -120,7 +119,6 @@ class ChengeProfileViewController: UIViewController {
     
     private func configureConstraints() {
         NSLayoutConstraint.activate([
-            
             backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
             backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -131,13 +129,13 @@ class ChengeProfileViewController: UIViewController {
             profileBackgroundImageView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor),
             profileBackgroundImageView.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor),
             
-            profileAvatarImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
-            profileAvatarImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            profileAvatarImageView.topAnchor.constraint(equalTo: profileBackgroundImageView.topAnchor, constant: 150),
+            profileAvatarImageView.centerXAnchor.constraint(equalTo: profileBackgroundImageView.centerXAnchor),
             profileAvatarImageView.heightAnchor.constraint(equalToConstant: 100),
             profileAvatarImageView.widthAnchor.constraint(equalToConstant: 100),
             
-            addNewPhotoButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
-            addNewPhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            addNewPhotoButton.topAnchor.constraint(equalTo: profileBackgroundImageView.topAnchor, constant: 150),
+            addNewPhotoButton.centerXAnchor.constraint(equalTo: profileBackgroundImageView.centerXAnchor),
             addNewPhotoButton.widthAnchor.constraint(equalToConstant: 100),
             addNewPhotoButton.heightAnchor.constraint(equalToConstant: 100),
             
@@ -151,7 +149,7 @@ class ChengeProfileViewController: UIViewController {
             mainTapleView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 15),
             mainTapleView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
             mainTapleView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-
+            
         ])}
     
 }
@@ -162,7 +160,7 @@ extension ChengeProfileViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ChangeProfileTableViewCell.identifier, for: indexPath) 
+        let cell = tableView.dequeueReusableCell(withIdentifier: ChangeProfileTableViewCell.identifier, for: indexPath)
         
         return cell
     }
@@ -173,6 +171,6 @@ extension ChengeProfileViewController: UITableViewDelegate, UITableViewDataSourc
         navigationController?.pushViewController(controller, animated: true)
         mainTapleView.deselectRow(at: indexPath, animated: true)
     }
-
-
+    
+    
 }

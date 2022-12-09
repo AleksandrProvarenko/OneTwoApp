@@ -158,7 +158,7 @@ class ProfileViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         horizontalMenu.delegate = self
-    
+        
         configureConstraints()
         configureProfileImageButton()
      
@@ -212,10 +212,10 @@ class ProfileViewController: UIViewController {
             profileBackgroundImage.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             profileBackgroundImage.heightAnchor.constraint(equalToConstant: 300),
             
-            profileView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            profileView.topAnchor.constraint(equalTo: profileBackgroundImage.safeAreaLayoutGuide.topAnchor, constant: 20),
             profileView.widthAnchor.constraint(equalToConstant: 400),
             profileView.heightAnchor.constraint(equalToConstant: 280),
-            profileView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            profileView.centerXAnchor.constraint(equalTo: profileBackgroundImage.centerXAnchor),
             
             profileAvatarImageButton.topAnchor.constraint(equalTo: profileView.topAnchor, constant: -50),
             profileAvatarImageButton.centerXAnchor.constraint(equalTo: profileView.centerXAnchor),

@@ -45,6 +45,8 @@ class ProfileChangeNameViewController: UIViewController {
         view.addSubview(underLineNavigationBar)
         view.addSubview(underLineNameTextField)
         
+        
+        
         configureNavigationBar()
         configureConstraints()
         
@@ -56,6 +58,7 @@ class ProfileChangeNameViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "cancel", style: .plain, target: self, action: #selector(cancelButtonTap))
+    
         navigationItem.leftBarButtonItem?.tintColor = .systemRed
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "save", style: .plain, target: self, action: #selector(saveButtonTap))
@@ -76,14 +79,14 @@ class ProfileChangeNameViewController: UIViewController {
     
     private func configureConstraints() {
         NSLayoutConstraint.activate([
-            enterNameTextFielad.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            enterNameTextFielad.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            enterNameTextFielad.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            
             underLineNavigationBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             underLineNavigationBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             underLineNavigationBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             underLineNavigationBar.heightAnchor.constraint(equalToConstant: 1),
+            
+            enterNameTextFielad.topAnchor.constraint(equalTo: underLineNavigationBar.bottomAnchor, constant: 20),
+            enterNameTextFielad.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            enterNameTextFielad.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
             underLineNameTextField.topAnchor.constraint(equalTo: enterNameTextFielad.bottomAnchor, constant: 5),
             underLineNameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -92,6 +95,4 @@ class ProfileChangeNameViewController: UIViewController {
             
         ])
     }
-    
-    
 }

@@ -9,6 +9,8 @@ import UIKit
 
 class HomeCommentsPresentationControllerTableView: UIViewController {
     
+  
+    
     private let mainTableView: UITableView = {
         let tableView = UITableView()
         tableView.register(HomeCommentsPresentationControllerTableViewCell.self, forCellReuseIdentifier: HomeCommentsPresentationControllerTableViewCell.identifier)
@@ -34,7 +36,6 @@ class HomeCommentsPresentationControllerTableView: UIViewController {
         tv.textColor = UIColor.black
         tv.keyboardAppearance = .light
         tv.text = "Add comment"
-        
         return tv
     }()
     
@@ -138,7 +139,7 @@ extension HomeCommentsPresentationControllerTableView: UITableViewDelegate, UITa
 
 extension HomeCommentsPresentationControllerTableView: HomeCommentsPresentationControllerDelegate {
     func userAvatarImageTap() {
-        let vc = ProfileGuestViewController()
+        let vc =  ProfileGuestViewController()
         vc.modalPresentationStyle = .automatic
         self.present(vc, animated: true, completion: nil)
     }

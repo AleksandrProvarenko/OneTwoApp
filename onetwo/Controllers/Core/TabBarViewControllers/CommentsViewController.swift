@@ -11,7 +11,6 @@ class CommentsViewController: UIViewController {
     
     private let mainTableView: UITableView = {
         let tableView = UITableView()
-       // tableView.backgroundColor = .white
         tableView.register(CommentsTableViewCell.self, forCellReuseIdentifier: CommentsTableViewCell.identifier)
         return tableView
     }()

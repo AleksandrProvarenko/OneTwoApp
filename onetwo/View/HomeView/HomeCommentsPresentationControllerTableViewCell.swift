@@ -10,15 +10,14 @@ import UIKit
 
 protocol HomeCommentsPresentationControllerDelegate: AnyObject {
     func userAvatarImageTap()
-    func userGuestAvatarImageTap() 
+    func userGuestAvatarImageTap()
 }
 
 class HomeCommentsPresentationControllerTableViewCell: UITableViewCell {
     
     static var identifier = "HomeCommentsPresentationControllerTableViewCell"
-    
     weak var delegate: HomeCommentsPresentationControllerDelegate?
-    
+   
     private let userAvatarImageViewButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: "profileImage"), for: .normal)
@@ -198,6 +197,7 @@ class HomeCommentsPresentationControllerTableViewCell: UITableViewCell {
     
     private func configureConstraints() {
         NSLayoutConstraint.activate([
+            
             userAvatarImageViewButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15),
             userAvatarImageViewButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
             userAvatarImageViewButton.widthAnchor.constraint(equalToConstant: 50),
