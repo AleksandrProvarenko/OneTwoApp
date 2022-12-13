@@ -34,21 +34,26 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         view.addSubview(collectionVideoView)
+       
         collectionVideoView.delegate = self
         collectionVideoView.dataSource = self
-        
+       
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//            let overLayer = LoginPopUp()
+//            overLayer.apper(sender: self)
+//        }
+    
         configureConstraints()
         configureNavigationBar()
     }
     
-  
     //MARK: - CollectionViewDidLayoutSubviews
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionVideoView.frame = view.bounds
     }
-    
+
     //MARK: - configureNavigationBar
     
     private func configureNavigationBar() {
@@ -68,6 +73,7 @@ class HomeViewController: UIViewController {
     
 }
 
+
 //MARK: - Extantion CollectionViewDelegatem, CollectionViewDataSource
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -78,6 +84,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeVideoCollectionViewCell.identidier, for: indexPath) as! HomeVideoCollectionViewCell
+            
             
             let video = video[indexPath.row]
             cell.configureVideo(with: video)

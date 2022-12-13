@@ -8,10 +8,15 @@
 import UIKit
 
 class MainTabBarViewController: UITabBarController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            let loginPopUP = LoginPopUp()
+            loginPopUP.apper(sender: self)
+        }
+        
         let vc1 = UINavigationController(rootViewController: HomeViewController())
         let vc2 = UINavigationController(rootViewController: InterestingViewController())
         let vc3 = UINavigationController(rootViewController: CameraOnViewController())
@@ -32,8 +37,9 @@ class MainTabBarViewController: UITabBarController {
         tabBar.backgroundColor = .systemBackground
         tabBar.tintColor = .label
         setViewControllers([vc1, vc2, vc3, vc4, vc5], animated: true)
-    }
     
+    }
+  
 }
 
 

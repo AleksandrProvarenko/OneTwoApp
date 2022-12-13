@@ -20,6 +20,8 @@ protocol HomeVideoCollectionViewCellDelegate: AnyObject {
 
 class HomeVideoCollectionViewCell: UICollectionViewCell {
     
+    var popUP = LoginPopUp()
+    
     weak var delegate: HomeVideoCollectionViewCellDelegate?
     
     static let identidier = "HomeVideoCollectionViewCell"
@@ -123,7 +125,7 @@ class HomeVideoCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+        
     //MARK: - layoutSubviews for configureVideoView
     
     override func layoutSubviews() {
