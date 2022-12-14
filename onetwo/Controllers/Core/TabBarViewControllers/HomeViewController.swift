@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 
 class HomeViewController: UIViewController {
-    
+
     let video: [Video] = Video.fetchVideo()
     var commentsPresController = HomeCommentsPresentationControllerTableView()
     
@@ -34,15 +34,15 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         view.addSubview(collectionVideoView)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            let popUp = LoginPopUp()
+            popUp.appear(sender: self)
+        }
        
         collectionVideoView.delegate = self
         collectionVideoView.dataSource = self
        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//            let overLayer = LoginPopUp()
-//            overLayer.apper(sender: self)
-//        }
-    
         configureConstraints()
         configureNavigationBar()
     }
@@ -72,7 +72,6 @@ class HomeViewController: UIViewController {
     }
     
 }
-
 
 //MARK: - Extantion CollectionViewDelegatem, CollectionViewDataSource
 
@@ -128,3 +127,4 @@ extension HomeViewController: HomeVideoCollectionViewCellDelegate {
     }
     
 }
+

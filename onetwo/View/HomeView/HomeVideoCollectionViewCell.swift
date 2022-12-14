@@ -20,8 +20,6 @@ protocol HomeVideoCollectionViewCellDelegate: AnyObject {
 
 class HomeVideoCollectionViewCell: UICollectionViewCell {
     
-    var popUP = LoginPopUp()
-    
     weak var delegate: HomeVideoCollectionViewCellDelegate?
     
     static let identidier = "HomeVideoCollectionViewCell"

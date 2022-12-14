@@ -117,6 +117,7 @@ class LoginPopUp: UIViewController {
     //MARK: - Сalling this function in HomeViewContoller in viewDidLoad
     
     func appear(sender: UIViewController) {
+        sender.modalPresentationStyle = .fullScreen
         sender.present(self, animated: false) {
         self.showPopUp()
         }

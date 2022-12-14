@@ -12,8 +12,13 @@
 		0B05CD842917EA2300EB0375 /* lifeHaks3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0B05CD802917EA2300EB0375 /* lifeHaks3.mp4 */; };
 		0B05CD852917EA2300EB0375 /* lifeHaks2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0B05CD812917EA2300EB0375 /* lifeHaks2.mp4 */; };
 		0B05CD862917EA2300EB0375 /* lifeHaks1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0B05CD822917EA2300EB0375 /* lifeHaks1.mp4 */; };
+		0B09FA34291A54D400C51E18 /* ProfileFollowersButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B09FA33291A54D400C51E18 /* ProfileFollowersButtonTableViewCell.swift */; };
+		0B10B08E29265C9500C43A56 /* ProfileChangeNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B10B08D29265C9500C43A56 /* ProfileChangeNameViewController.swift */; };
+		0B14B7712923C32800623F59 /* ChengeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B14B7702923C32800623F59 /* ChengeProfileViewController.swift */; };
 		0B359E0428F5663900214698 /* ProfileFavoriteVodeoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B359E0328F5663900214698 /* ProfileFavoriteVodeoCollectionViewCell.swift */; };
 		0B359E0828F5930D00214698 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B359E0728F5930D00214698 /* CommentsTableViewCell.swift */; };
+		0B3DD52A291935AC00E74C82 /* ProfileFollowersButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3DD529291935AC00E74C82 /* ProfileFollowersButtonViewController.swift */; };
+		0B5A5DF9294714080048686D /* LoginPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A5DF8294714080048686D /* LoginPopUp.swift */; };
 		0B72F34029126DEF008A34B2 /* ProfileGuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72F33F29126DEF008A34B2 /* ProfileGuestViewController.swift */; };
 		0B72F3432912947C008A34B2 /* ProfileGuestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72F3422912947C008A34B2 /* ProfileGuestCollectionViewCell.swift */; };
 		0B90F85828F00FEE00D7F3EB /* HorizontalMenuBattonUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90F85728F00FEE00D7F3EB /* HorizontalMenuBattonUIView.swift */; };
@@ -30,9 +35,12 @@
 		0BA8274A28DDA30000EAACD8 /* CameraOnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA8274928DDA30000EAACD8 /* CameraOnViewController.swift */; };
 		0BA8274C28DDA33D00EAACD8 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA8274B28DDA33D00EAACD8 /* CommentsViewController.swift */; };
 		0BA8274E28DDA37A00EAACD8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA8274D28DDA37A00EAACD8 /* ProfileViewController.swift */; };
+		0BA8A6D9292635A800044563 /* ChangeProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA8A6D8292635A800044563 /* ChangeProfileTableViewCell.swift */; };
 		0BCD137D28F95AFF008692C2 /* HomeVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCD137C28F95AFF008692C2 /* HomeVideoCollectionViewCell.swift */; };
 		0BCD138828F98922008692C2 /* HomeVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCD138728F98922008692C2 /* HomeVideoModel.swift */; };
 		0BD0786B28D9BDD200A037BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0786A28D9BDD200A037BF /* SignUpViewController.swift */; };
+		0BD9C3FB291A929100E0F7F2 /* ProfileFollowingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD9C3FA291A929100E0F7F2 /* ProfileFollowingButtonViewController.swift */; };
+		0BD9C3FE291A936400E0F7F2 /* ProfileFollowingButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD9C3FD291A936400E0F7F2 /* ProfileFollowingButtonTableViewCell.swift */; };
 		0BF080AE2906728D00F30772 /* HomeCommentsPresentationControllerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF080AD2906728D00F30772 /* HomeCommentsPresentationControllerTableView.swift */; };
 		0BF080B22906776100F30772 /* HomeCommentsPresentationControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF080B12906776100F30772 /* HomeCommentsPresentationControllerTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -43,8 +51,13 @@
 		0B05CD802917EA2300EB0375 /* lifeHaks3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lifeHaks3.mp4; sourceTree = "<group>"; };
 		0B05CD812917EA2300EB0375 /* lifeHaks2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lifeHaks2.mp4; sourceTree = "<group>"; };
 		0B05CD822917EA2300EB0375 /* lifeHaks1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lifeHaks1.mp4; sourceTree = "<group>"; };
+		0B09FA33291A54D400C51E18 /* ProfileFollowersButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFollowersButtonTableViewCell.swift; sourceTree = "<group>"; };
+		0B10B08D29265C9500C43A56 /* ProfileChangeNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileChangeNameViewController.swift; sourceTree = "<group>"; };
+		0B14B7702923C32800623F59 /* ChengeProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChengeProfileViewController.swift; sourceTree = "<group>"; };
 		0B359E0328F5663900214698 /* ProfileFavoriteVodeoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFavoriteVodeoCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B359E0728F5930D00214698 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		0B3DD529291935AC00E74C82 /* ProfileFollowersButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFollowersButtonViewController.swift; sourceTree = "<group>"; };
+		0B5A5DF8294714080048686D /* LoginPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopUp.swift; sourceTree = "<group>"; };
 		0B72F33F29126DEF008A34B2 /* ProfileGuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGuestViewController.swift; sourceTree = "<group>"; };
 		0B72F3422912947C008A34B2 /* ProfileGuestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGuestCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B90F85728F00FEE00D7F3EB /* HorizontalMenuBattonUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalMenuBattonUIView.swift; sourceTree = "<group>"; };
@@ -63,9 +76,12 @@
 		0BA8274928DDA30000EAACD8 /* CameraOnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOnViewController.swift; sourceTree = "<group>"; };
 		0BA8274B28DDA33D00EAACD8 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		0BA8274D28DDA37A00EAACD8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0BA8A6D8292635A800044563 /* ChangeProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfileTableViewCell.swift; sourceTree = "<group>"; };
 		0BCD137C28F95AFF008692C2 /* HomeVideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BCD138728F98922008692C2 /* HomeVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVideoModel.swift; sourceTree = "<group>"; };
 		0BD0786A28D9BDD200A037BF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0BD9C3FA291A929100E0F7F2 /* ProfileFollowingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFollowingButtonViewController.swift; sourceTree = "<group>"; };
+		0BD9C3FD291A936400E0F7F2 /* ProfileFollowingButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFollowingButtonTableViewCell.swift; sourceTree = "<group>"; };
 		0BF080AD2906728D00F30772 /* HomeCommentsPresentationControllerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCommentsPresentationControllerTableView.swift; sourceTree = "<group>"; };
 		0BF080B12906776100F30772 /* HomeCommentsPresentationControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCommentsPresentationControllerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +116,35 @@
 			path = HomeVideoFile;
 			sourceTree = "<group>";
 		};
+		0B09FA32291A548700C51E18 /* ProfileFollowersButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				0B09FA33291A54D400C51E18 /* ProfileFollowersButtonTableViewCell.swift */,
+			);
+			path = ProfileFollowersButtonView;
+			sourceTree = "<group>";
+		};
+		0B14B76D29223EF100623F59 /* ProfileControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0BD9C3FA291A929100E0F7F2 /* ProfileFollowingButtonViewController.swift */,
+				0B3DD529291935AC00E74C82 /* ProfileFollowersButtonViewController.swift */,
+				0B72F33F29126DEF008A34B2 /* ProfileGuestViewController.swift */,
+				0B14B7702923C32800623F59 /* ChengeProfileViewController.swift */,
+				0B10B08D29265C9500C43A56 /* ProfileChangeNameViewController.swift */,
+			);
+			path = ProfileControllers;
+			sourceTree = "<group>";
+		};
+		0B14B76E29223F2300623F59 /* HomeControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B5A5DF8294714080048686D /* LoginPopUp.swift */,
+				0BF080AD2906728D00F30772 /* HomeCommentsPresentationControllerTableView.swift */,
+			);
+			path = HomeControllers;
+			sourceTree = "<group>";
+		};
 		0B359E0528F5677400214698 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +160,15 @@
 				0B359E0728F5930D00214698 /* CommentsTableViewCell.swift */,
 			);
 			path = CommentsView;
+			sourceTree = "<group>";
+		};
+		0B3DD52829191F0B00E74C82 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0B72F33E29126CF8008A34B2 /* LoginViewContollers */,
+				0BA8274428DDA19200EAACD8 /* TabBarViewControllers */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		0B72F33E29126CF8008A34B2 /* LoginViewContollers */ = {
@@ -186,6 +240,9 @@
 		0BA6335828D871B400FD188A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0BA8A6D72926351F00044563 /* ChangeProfileViewControllerView */,
+				0BD9C3FC291A931E00E0F7F2 /* ProfileFollowingButtonView */,
+				0B09FA32291A548700C51E18 /* ProfileFollowersButtonView */,
 				0BCD137B28F95AE1008692C2 /* HomeView */,
 				0B01DA6F28F6F57C00E38DBE /* InterestingView */,
 				0B359E0628F56E2200214698 /* CommentsView */,
@@ -207,9 +264,9 @@
 		0BA6335A28D871D500FD188A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0B72F33F29126DEF008A34B2 /* ProfileGuestViewController.swift */,
-				0B72F33E29126CF8008A34B2 /* LoginViewContollers */,
-				0BA8274428DDA19200EAACD8 /* TabBarViewControllers */,
+				0B14B76E29223F2300623F59 /* HomeControllers */,
+				0B14B76D29223EF100623F59 /* ProfileControllers */,
+				0B3DD52829191F0B00E74C82 /* Core */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -227,14 +284,29 @@
 			path = TabBarViewControllers;
 			sourceTree = "<group>";
 		};
+		0BA8A6D72926351F00044563 /* ChangeProfileViewControllerView */ = {
+			isa = PBXGroup;
+			children = (
+				0BA8A6D8292635A800044563 /* ChangeProfileTableViewCell.swift */,
+			);
+			path = ChangeProfileViewControllerView;
+			sourceTree = "<group>";
+		};
 		0BCD137B28F95AE1008692C2 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
 				0BCD137C28F95AFF008692C2 /* HomeVideoCollectionViewCell.swift */,
-				0BF080AD2906728D00F30772 /* HomeCommentsPresentationControllerTableView.swift */,
 				0BF080B12906776100F30772 /* HomeCommentsPresentationControllerTableViewCell.swift */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		0BD9C3FC291A931E00E0F7F2 /* ProfileFollowingButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				0BD9C3FD291A936400E0F7F2 /* ProfileFollowingButtonTableViewCell.swift */,
+			);
+			path = ProfileFollowingButtonView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,24 +384,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BA8274A28DDA30000EAACD8 /* CameraOnViewController.swift in Sources */,
+				0B09FA34291A54D400C51E18 /* ProfileFollowersButtonTableViewCell.swift in Sources */,
 				0BD0786B28D9BDD200A037BF /* SignUpViewController.swift in Sources */,
+				0BD9C3FB291A929100E0F7F2 /* ProfileFollowingButtonViewController.swift in Sources */,
+				0B3DD52A291935AC00E74C82 /* ProfileFollowersButtonViewController.swift in Sources */,
 				0BCD137D28F95AFF008692C2 /* HomeVideoCollectionViewCell.swift in Sources */,
+				0B5A5DF9294714080048686D /* LoginPopUp.swift in Sources */,
+				0BA8A6D9292635A800044563 /* ChangeProfileTableViewCell.swift in Sources */,
 				0BA8274C28DDA33D00EAACD8 /* CommentsViewController.swift in Sources */,
 				0BA6334728D8639600FD188A /* LoginViewController.swift in Sources */,
 				0BA6336028D88BAD00FD188A /* CreatePasswordViewController.swift in Sources */,
 				0BA8274628DDA23D00EAACD8 /* HomeViewController.swift in Sources */,
 				0B359E0428F5663900214698 /* ProfileFavoriteVodeoCollectionViewCell.swift in Sources */,
 				0BCD138828F98922008692C2 /* HomeVideoModel.swift in Sources */,
+				0B10B08E29265C9500C43A56 /* ProfileChangeNameViewController.swift in Sources */,
 				0B01DA7128F6F98800E38DBE /* IntrestingCollectionViewCell.swift in Sources */,
 				0B359E0828F5930D00214698 /* CommentsTableViewCell.swift in Sources */,
 				0B72F3432912947C008A34B2 /* ProfileGuestCollectionViewCell.swift in Sources */,
 				0BA8274E28DDA37A00EAACD8 /* ProfileViewController.swift in Sources */,
 				0BA8274328DD9F3700EAACD8 /* MainTabBarViewController.swift in Sources */,
+				0BD9C3FE291A936400E0F7F2 /* ProfileFollowingButtonTableViewCell.swift in Sources */,
 				0B90F85828F00FEE00D7F3EB /* HorizontalMenuBattonUIView.swift in Sources */,
 				0B72F34029126DEF008A34B2 /* ProfileGuestViewController.swift in Sources */,
 				0BA8274828DDA2BD00EAACD8 /* InterestingViewController.swift in Sources */,
 				0BA6335E28D88B7100FD188A /* SignUpWithViewController.swift in Sources */,
 				0BF080B22906776100F30772 /* HomeCommentsPresentationControllerTableViewCell.swift in Sources */,
+				0B14B7712923C32800623F59 /* ChengeProfileViewController.swift in Sources */,
 				0BA6334328D8639600FD188A /* AppDelegate.swift in Sources */,
 				0BF080AE2906728D00F30772 /* HomeCommentsPresentationControllerTableView.swift in Sources */,
 				0BA6334528D8639600FD188A /* SceneDelegate.swift in Sources */,
