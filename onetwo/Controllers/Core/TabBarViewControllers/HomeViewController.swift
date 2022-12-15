@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
         view.addSubview(collectionVideoView)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            let popUp = LoginPopUp()
+            let popUp = LoginPopUpViewController()
             popUp.appear(sender: self)
         }
        

@@ -7,13 +7,7 @@
 
 import UIKit
 
-class LoginPopUp: UIViewController {
-    
-    private let backgroundView: UIView = {
-       let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+class LoginPopUpViewController: UIViewController {
 
     private let popUpView: UIView = {
        let view = UIView()
@@ -77,7 +71,6 @@ class LoginPopUp: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(backgroundView)
         view.addSubview(popUpView)
         view.addSubview(backgroundImagePopUpView)
         view.addSubview(goToRegistrationImageView)
@@ -93,9 +86,8 @@ class LoginPopUp: UIViewController {
     //MARK: - Configuration View
     
     func configureView() {
-        self.backgroundView.backgroundColor = .clear
-        self.backgroundView.backgroundColor = .black.withAlphaComponent(0.6)
-        self.backgroundView.alpha = 0
+        self.view.backgroundColor = .clear
+        self.view.alpha = 0
         self.popUpView.alpha = 0
     }
     
@@ -127,7 +119,7 @@ class LoginPopUp: UIViewController {
 
    private func showPopUp() {
        UIView.animate(withDuration: 1, delay: 0) {
-           self.backgroundView.alpha = 1
+           self.view.alpha = 1
            self.popUpView.alpha = 1
        }
     }
@@ -135,8 +127,8 @@ class LoginPopUp: UIViewController {
     //MARK: - Hide PopUp
     
     func hidePopUp() {
-        UIView.animate(withDuration: 0, delay: 0.0, options: .curveEaseOut) {
-            self.backgroundView.alpha = 0
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseOut) {
+            self.view.alpha = 0
             self.popUpView.alpha = 0
         } completion: { _ in
             self.dismiss(animated: true)
@@ -149,13 +141,8 @@ class LoginPopUp: UIViewController {
 
   public func constraints() {
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            
-            popUpView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
-            popUpView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor),
+            popUpView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            popUpView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             popUpView.widthAnchor.constraint(equalToConstant: 400),
             popUpView.heightAnchor.constraint(equalToConstant: 400),
             
