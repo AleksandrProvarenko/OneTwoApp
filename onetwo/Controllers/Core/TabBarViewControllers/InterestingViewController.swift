@@ -61,7 +61,7 @@ extension InterestingViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IntrestingCollectionViewCell.identifier, for: indexPath) as? IntrestingCollectionViewCell else { return UICollectionViewCell() }
-        
+    
         return cell
     }
     

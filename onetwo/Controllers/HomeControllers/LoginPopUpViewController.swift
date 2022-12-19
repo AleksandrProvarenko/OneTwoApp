@@ -38,7 +38,7 @@ class LoginPopUpViewController: UIViewController {
     
     private let descriptionLabel: UILabel = {
        let label = UILabel()
-        label.text = "To add your own video and use the application to the fullest, you need to register."
+        label.text = "To add your own video and use the application to the fullest, you need to register in profile"
         label.textColor = .white
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -48,20 +48,10 @@ class LoginPopUpViewController: UIViewController {
     
     private let loginButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Sign in", for: .normal)
+        button.setTitle("ok", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.setTitleColor(UIColor.black, for: .normal)
         button.backgroundColor = .white
-        button.layer.cornerRadius = 5
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
-    private let dismissButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Not now", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.setTitleColor(UIColor.lightGray, for: .normal)
         button.layer.cornerRadius = 5
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -76,8 +66,7 @@ class LoginPopUpViewController: UIViewController {
         view.addSubview(goToRegistrationImageView)
         view.addSubview(descriptionLabel)
         view.addSubview(loginButton)
-        view.addSubview(dismissButton)
-       
+    
         battonTarget()
         constraints()
         configureView()
@@ -95,14 +84,9 @@ class LoginPopUpViewController: UIViewController {
     
     private func battonTarget() {
         loginButton.addTarget(self, action: #selector(shignUP), for: .touchUpInside)
-        dismissButton.addTarget(self, action: #selector(dissmiss), for: .touchUpInside)
     }
     
     @objc func shignUP() {
-        print("shignUP")
-    }
-    
-    @objc func dissmiss() {
         hidePopUp()
     }
     
@@ -143,8 +127,8 @@ class LoginPopUpViewController: UIViewController {
         NSLayoutConstraint.activate([
             popUpView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             popUpView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            popUpView.widthAnchor.constraint(equalToConstant: 400),
-            popUpView.heightAnchor.constraint(equalToConstant: 400),
+            popUpView.widthAnchor.constraint(equalToConstant: 350),
+            popUpView.heightAnchor.constraint(equalToConstant: 300),
             
             backgroundImagePopUpView.topAnchor.constraint(equalTo: popUpView.topAnchor),
             backgroundImagePopUpView.leadingAnchor.constraint(equalTo: popUpView.leadingAnchor),
@@ -156,17 +140,15 @@ class LoginPopUpViewController: UIViewController {
             goToRegistrationImageView.widthAnchor.constraint(equalToConstant: 250),
             goToRegistrationImageView.heightAnchor.constraint(equalToConstant: 70),
             
-            descriptionLabel.topAnchor.constraint(equalTo: goToRegistrationImageView.bottomAnchor, constant: 50),
+            descriptionLabel.topAnchor.constraint(equalTo: goToRegistrationImageView.bottomAnchor, constant: 30),
             descriptionLabel.leadingAnchor.constraint(equalTo: backgroundImagePopUpView.leadingAnchor, constant: 20),
             descriptionLabel.trailingAnchor.constraint(equalTo: backgroundImagePopUpView.trailingAnchor, constant: -20),
             
             loginButton.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 40),
             loginButton.centerXAnchor.constraint(equalTo: popUpView.centerXAnchor),
-            loginButton.widthAnchor.constraint(equalToConstant: 300),
-            loginButton.heightAnchor.constraint(equalToConstant: 50),
+            loginButton.widthAnchor.constraint(equalToConstant: 250),
+            loginButton.heightAnchor.constraint(equalToConstant: 40),
             
-            dismissButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 15),
-            dismissButton.centerXAnchor.constraint(equalTo: popUpView.centerXAnchor)
         ])
         
     }
