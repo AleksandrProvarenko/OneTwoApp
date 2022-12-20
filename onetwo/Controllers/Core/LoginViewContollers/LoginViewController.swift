@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-        
+   
     private let loginBackgroundImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "Login")
@@ -175,7 +175,7 @@ class LoginViewController: UIViewController {
     
     @objc func mainTapBarController() {
         let controller = MainTabBarViewController()
-        navigationController?.pushViewController(controller, animated: true)
+        navigationController?.setViewControllers([controller], animated: true)
     }
     
     //MARK: - ConfigureConstraints

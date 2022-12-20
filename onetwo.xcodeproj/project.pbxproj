@@ -18,7 +18,6 @@
 		0B359E0428F5663900214698 /* ProfileFavoriteVodeoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B359E0328F5663900214698 /* ProfileFavoriteVodeoCollectionViewCell.swift */; };
 		0B359E0828F5930D00214698 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B359E0728F5930D00214698 /* CommentsTableViewCell.swift */; };
 		0B3DD52A291935AC00E74C82 /* ProfileFollowersButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3DD529291935AC00E74C82 /* ProfileFollowersButtonViewController.swift */; };
-		0B5A5DF9294714080048686D /* LoginPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A5DF8294714080048686D /* LoginPopUpViewController.swift */; };
 		0B72F34029126DEF008A34B2 /* ProfileGuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72F33F29126DEF008A34B2 /* ProfileGuestViewController.swift */; };
 		0B72F3432912947C008A34B2 /* ProfileGuestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72F3422912947C008A34B2 /* ProfileGuestCollectionViewCell.swift */; };
 		0B90F85828F00FEE00D7F3EB /* HorizontalMenuBattonUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90F85728F00FEE00D7F3EB /* HorizontalMenuBattonUIView.swift */; };
@@ -57,7 +56,6 @@
 		0B359E0328F5663900214698 /* ProfileFavoriteVodeoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFavoriteVodeoCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B359E0728F5930D00214698 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		0B3DD529291935AC00E74C82 /* ProfileFollowersButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFollowersButtonViewController.swift; sourceTree = "<group>"; };
-		0B5A5DF8294714080048686D /* LoginPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopUpViewController.swift; sourceTree = "<group>"; };
 		0B72F33F29126DEF008A34B2 /* ProfileGuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGuestViewController.swift; sourceTree = "<group>"; };
 		0B72F3422912947C008A34B2 /* ProfileGuestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGuestCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B90F85728F00FEE00D7F3EB /* HorizontalMenuBattonUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalMenuBattonUIView.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 		0B14B76E29223F2300623F59 /* HomeControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0B5A5DF8294714080048686D /* LoginPopUpViewController.swift */,
 				0BF080AD2906728D00F30772 /* HomeCommentsPresentationControllerTableView.swift */,
 			);
 			path = HomeControllers;
@@ -389,7 +386,6 @@
 				0BD9C3FB291A929100E0F7F2 /* ProfileFollowingButtonViewController.swift in Sources */,
 				0B3DD52A291935AC00E74C82 /* ProfileFollowersButtonViewController.swift in Sources */,
 				0BCD137D28F95AFF008692C2 /* HomeVideoCollectionViewCell.swift in Sources */,
-				0B5A5DF9294714080048686D /* LoginPopUpViewController.swift in Sources */,
 				0BA8A6D9292635A800044563 /* ChangeProfileTableViewCell.swift in Sources */,
 				0BA8274C28DDA33D00EAACD8 /* CommentsViewController.swift in Sources */,
 				0BA6334728D8639600FD188A /* LoginViewController.swift in Sources */,

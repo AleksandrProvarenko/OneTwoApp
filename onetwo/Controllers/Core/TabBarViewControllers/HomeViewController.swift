@@ -34,11 +34,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         view.addSubview(collectionVideoView)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            let popUp = LoginPopUpViewController()
-            popUp.appear(sender: self)
-        }
        
         collectionVideoView.delegate = self
         collectionVideoView.dataSource = self
@@ -83,8 +78,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeVideoCollectionViewCell.identidier, for: indexPath) as! HomeVideoCollectionViewCell
-            
-            
+        
             let video = video[indexPath.row]
             cell.configureVideo(with: video)
             cell.delegate = self
@@ -101,11 +95,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 //MARK: - CollectionViewCellDelegate, sheetPresentationController, pushVCtoProfileGuestVC
 
 extension HomeViewController: HomeVideoCollectionViewCellDelegate {
+    
     func userProfileImageButtonTap() {
         let controller = ProfileGuestViewController()
         controller.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(controller, animated: true)
-        
     }
 
     func didTapLikeButton() {
