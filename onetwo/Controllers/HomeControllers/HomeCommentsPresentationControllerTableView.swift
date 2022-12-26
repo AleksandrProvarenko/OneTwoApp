@@ -9,8 +9,6 @@ import UIKit
 
 class HomeCommentsPresentationControllerTableView: UIViewController {
     
-  
-    
     private let mainTableView: UITableView = {
         let tableView = UITableView()
         tableView.register(HomeCommentsPresentationControllerTableViewCell.self, forCellReuseIdentifier: HomeCommentsPresentationControllerTableViewCell.identifier)
