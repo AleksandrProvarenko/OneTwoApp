@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1002004194503-bb6s0qs6k9neep2baqr2ahn5lal75vga.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1002004194503-bb6s0qs6k9neep2baqr2ahn5lal75vga</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCvJbY9XABCEZCH4POfK2N4-pyW-8SR3Bg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1002004194503</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>AleksandrProvarenko.onetwo</string>
+	<key>PROJECT_ID</key>
+	<string>onetwo-78bcc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>onetwo-78bcc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1002004194503:ios:b80833f2f1980564748ae2</string>
+</dict>
+</plist>
