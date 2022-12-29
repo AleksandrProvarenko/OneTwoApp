@@ -172,7 +172,7 @@ class SignUpViewController: UIViewController {
     
     @objc func nexController() {
         let controller = SignUpWithViewController()
-        navigationController?.pushViewController(controller, animated: true)
+        navigationController?.setViewControllers([controller], animated: true)
     }
     
     //MARK: - ConfigureConstraints

@@ -72,6 +72,20 @@ class CreatePasswordViewController: UIViewController {
         
         hideKeyboardReconiser()
         configureConstraints()
+        buttonTarget()
+    }
+    
+    //MARK: - Button Target
+    
+    private func buttonTarget() {
+        nextViewControllerButton.addTarget(self,
+                                           action: #selector(goToMainTabBarContriller),
+                                           for: .touchUpInside)
+    }
+    
+    @objc func goToMainTabBarContriller() {
+        let controller = MainTabBarViewController()
+        navigationController?.setViewControllers([controller], animated: true)
     }
     
     //MARK: - HideKeyboardReconizer
@@ -109,6 +123,5 @@ class CreatePasswordViewController: UIViewController {
             nextViewControllerButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
-    
-    
+
 }

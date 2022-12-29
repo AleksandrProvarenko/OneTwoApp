@@ -98,7 +98,7 @@ class SignUpWithViewController: UIViewController {
     
     @objc func nextVC() {
         let controller = CreatePasswordViewController()
-        navigationController?.pushViewController(controller, animated: true)
+        navigationController?.setViewControllers([controller], animated: true)
     }
     
     //MARK: - ConfigureConstraints

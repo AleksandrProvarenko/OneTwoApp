@@ -18,6 +18,10 @@
 		0B359E0428F5663900214698 /* ProfileFavoriteVodeoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B359E0328F5663900214698 /* ProfileFavoriteVodeoCollectionViewCell.swift */; };
 		0B359E0828F5930D00214698 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B359E0728F5930D00214698 /* CommentsTableViewCell.swift */; };
 		0B3DD52A291935AC00E74C82 /* ProfileFollowersButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3DD529291935AC00E74C82 /* ProfileFollowersButtonViewController.swift */; };
+		0B6EEED9295DD18E00882BA0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EEED8295DD18E00882BA0 /* AuthService.swift */; };
+		0B6EEEDB295DD2F300882BA0 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EEEDA295DD2F300882BA0 /* AlertManager.swift */; };
+		0B6EEEDD295DD95000882BA0 /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EEEDC295DD95000882BA0 /* RegisterUserRequest.swift */; };
+		0B6EEEDF295DE43F00882BA0 /* LogInUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EEEDE295DE43F00882BA0 /* LogInUserRequest.swift */; };
 		0B72F34029126DEF008A34B2 /* ProfileGuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72F33F29126DEF008A34B2 /* ProfileGuestViewController.swift */; };
 		0B72F3432912947C008A34B2 /* ProfileGuestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72F3422912947C008A34B2 /* ProfileGuestCollectionViewCell.swift */; };
 		0B90F85828F00FEE00D7F3EB /* HorizontalMenuBattonUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90F85728F00FEE00D7F3EB /* HorizontalMenuBattonUIView.swift */; };
@@ -61,6 +65,10 @@
 		0B359E0328F5663900214698 /* ProfileFavoriteVodeoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFavoriteVodeoCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B359E0728F5930D00214698 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		0B3DD529291935AC00E74C82 /* ProfileFollowersButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFollowersButtonViewController.swift; sourceTree = "<group>"; };
+		0B6EEED8295DD18E00882BA0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		0B6EEEDA295DD2F300882BA0 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		0B6EEEDC295DD95000882BA0 /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
+		0B6EEEDE295DE43F00882BA0 /* LogInUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInUserRequest.swift; sourceTree = "<group>"; };
 		0B72F33F29126DEF008A34B2 /* ProfileGuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGuestViewController.swift; sourceTree = "<group>"; };
 		0B72F3422912947C008A34B2 /* ProfileGuestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGuestCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B90F85728F00FEE00D7F3EB /* HorizontalMenuBattonUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalMenuBattonUIView.swift; sourceTree = "<group>"; };
@@ -178,6 +186,22 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		0B6EEEE0295DEAF900882BA0 /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				0B6EEED8295DD18E00882BA0 /* AuthService.swift */,
+			);
+			path = AuthService;
+			sourceTree = "<group>";
+		};
+		0B6EEEE1295DEB0E00882BA0 /* AlertManagers */ = {
+			isa = PBXGroup;
+			children = (
+				0B6EEEDA295DD2F300882BA0 /* AlertManager.swift */,
+			);
+			path = AlertManagers;
+			sourceTree = "<group>";
+		};
 		0B72F33E29126CF8008A34B2 /* LoginViewContollers */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +265,8 @@
 		0BA6335728D871A800FD188A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0B6EEEE1295DEB0E00882BA0 /* AlertManagers */,
+				0B6EEEE0295DEAF900882BA0 /* AuthService */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -265,6 +291,8 @@
 			children = (
 				0B05CD7E2917EA2300EB0375 /* HomeVideoFile */,
 				0BCD138728F98922008692C2 /* HomeVideoModel.swift */,
+				0B6EEEDC295DD95000882BA0 /* RegisterUserRequest.swift */,
+				0B6EEEDE295DE43F00882BA0 /* LogInUserRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -402,6 +430,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BA8274A28DDA30000EAACD8 /* CameraOnViewController.swift in Sources */,
+				0B6EEEDD295DD95000882BA0 /* RegisterUserRequest.swift in Sources */,
+				0B6EEEDF295DE43F00882BA0 /* LogInUserRequest.swift in Sources */,
 				0B09FA34291A54D400C51E18 /* ProfileFollowersButtonTableViewCell.swift in Sources */,
 				0BD0786B28D9BDD200A037BF /* SignUpViewController.swift in Sources */,
 				0BD9C3FB291A929100E0F7F2 /* ProfileFollowingButtonViewController.swift in Sources */,
@@ -426,8 +456,10 @@
 				0BA8274828DDA2BD00EAACD8 /* InterestingViewController.swift in Sources */,
 				0BA6335E28D88B7100FD188A /* SignUpWithViewController.swift in Sources */,
 				0BF080B22906776100F30772 /* HomeCommentsPresentationControllerTableViewCell.swift in Sources */,
+				0B6EEEDB295DD2F300882BA0 /* AlertManager.swift in Sources */,
 				0B14B7712923C32800623F59 /* ChengeProfileViewController.swift in Sources */,
 				0BA6334328D8639600FD188A /* AppDelegate.swift in Sources */,
+				0B6EEED9295DD18E00882BA0 /* AuthService.swift in Sources */,
 				0BF080AE2906728D00F30772 /* HomeCommentsPresentationControllerTableView.swift in Sources */,
 				0BA6334528D8639600FD188A /* SceneDelegate.swift in Sources */,
 			);
