@@ -49,6 +49,7 @@
 		0BD0786B28D9BDD200A037BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0786A28D9BDD200A037BF /* SignUpViewController.swift */; };
 		0BD9C3FB291A929100E0F7F2 /* ProfileFollowingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD9C3FA291A929100E0F7F2 /* ProfileFollowingButtonViewController.swift */; };
 		0BD9C3FE291A936400E0F7F2 /* ProfileFollowingButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD9C3FD291A936400E0F7F2 /* ProfileFollowingButtonTableViewCell.swift */; };
+		0BE55850295F0D5F00360374 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE5584F295F0D5F00360374 /* Validation.swift */; };
 		0BF080AE2906728D00F30772 /* HomeCommentsPresentationControllerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF080AD2906728D00F30772 /* HomeCommentsPresentationControllerTableView.swift */; };
 		0BF080B22906776100F30772 /* HomeCommentsPresentationControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF080B12906776100F30772 /* HomeCommentsPresentationControllerTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -94,6 +95,7 @@
 		0BD0786A28D9BDD200A037BF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0BD9C3FA291A929100E0F7F2 /* ProfileFollowingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFollowingButtonViewController.swift; sourceTree = "<group>"; };
 		0BD9C3FD291A936400E0F7F2 /* ProfileFollowingButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFollowingButtonTableViewCell.swift; sourceTree = "<group>"; };
+		0BE5584F295F0D5F00360374 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		0BF080AD2906728D00F30772 /* HomeCommentsPresentationControllerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCommentsPresentationControllerTableView.swift; sourceTree = "<group>"; };
 		0BF080B12906776100F30772 /* HomeCommentsPresentationControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCommentsPresentationControllerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -265,6 +267,7 @@
 		0BA6335728D871A800FD188A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0BE5584E295F0A1400360374 /* Validation */,
 				0B6EEEE1295DEB0E00882BA0 /* AlertManagers */,
 				0B6EEEE0295DEAF900882BA0 /* AuthService */,
 			);
@@ -343,6 +346,14 @@
 				0BD9C3FD291A936400E0F7F2 /* ProfileFollowingButtonTableViewCell.swift */,
 			);
 			path = ProfileFollowingButtonView;
+			sourceTree = "<group>";
+		};
+		0BE5584E295F0A1400360374 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				0BE5584F295F0D5F00360374 /* Validation.swift */,
+			);
+			path = Validation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +466,7 @@
 				0B72F34029126DEF008A34B2 /* ProfileGuestViewController.swift in Sources */,
 				0BA8274828DDA2BD00EAACD8 /* InterestingViewController.swift in Sources */,
 				0BA6335E28D88B7100FD188A /* SignUpWithViewController.swift in Sources */,
+				0BE55850295F0D5F00360374 /* Validation.swift in Sources */,
 				0BF080B22906776100F30772 /* HomeCommentsPresentationControllerTableViewCell.swift in Sources */,
 				0B6EEEDB295DD2F300882BA0 /* AlertManager.swift in Sources */,
 				0B14B7712923C32800623F59 /* ChengeProfileViewController.swift in Sources */,

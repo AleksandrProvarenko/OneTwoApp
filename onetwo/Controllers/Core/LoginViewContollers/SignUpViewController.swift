@@ -168,13 +168,54 @@ class SignUpViewController: UIViewController {
     
     private func configureButtons() {
         googleButton.addTarget(self, action: #selector(nexController), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(goToMainTabBarVC), for: .touchUpInside)
+    }
+    
+    @objc func goToMainTabBarVC() {
+        let registerUserRequest = RegisterUserRequest(email: self.emailTextFielad.text ?? "",
+                                                      password: self.passwordTextFielad.text ?? "",
+                                                      confirmPassword: self.confirmPasswordTextField.text ?? "")
+        
+        // Email check
+        if !Validation.isValidemail(for: registerUserRequest.email) {
+            AlertManager.showInvalidEmailAlert(on: self)
+            return
+        }
+        
+        // Password check
+        if !Validation.isValidPswword(for: registerUserRequest.password) {
+            AlertManager.showInvalidPasswordAlert(on: self)
+            return
+        }
+        
+        //ConfirmPassword
+        if !Validation.isValidConfirmPswword(for: registerUserRequest.confirmPassword) {
+            AlertManager.showConfirmPasswordAlert(on: self)
+            return
+        }
+        
+        AuthService.shared.registerUser(with: registerUserRequest) { [weak self]
+            wasRegistered, error in
+            guard let self = self else { return }
+            if let error = error {
+                AlertManager.showRegistrationError(on: self, with: error)
+            }
+            
+            if wasRegistered {
+                if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                    sceneDelegate.checkAuthentification()
+                }
+            } else {
+                AlertManager.showRegistrationErrorAlert(on: self)
+            }
+        }
     }
     
     @objc func nexController() {
         let controller = SignUpWithViewController()
         navigationController?.setViewControllers([controller], animated: true)
     }
-    
+        
     //MARK: - ConfigureConstraints
     
     private func configureConstraints() {
