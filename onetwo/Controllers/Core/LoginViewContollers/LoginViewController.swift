@@ -174,8 +174,31 @@ class LoginViewController: UIViewController {
     }
     
     @objc func mainTapBarController() {
-        let controller = MainTabBarViewController()
-        navigationController?.setViewControllers([controller], animated: true)
+        let loginRequest = LogInUserRequest(email: self.emailTextFielad.text ?? "",
+                                            password: self.passwordTextFielad.text ?? "")
+        
+        // Email check
+        if !Validation.isValidemail(for: loginRequest.email) {
+            AlertManager.showInvalidEmailAlert(on: self)
+            return
+        }
+        
+        // Password check
+        if !Validation.isValidPswword(for: loginRequest.password) {
+            AlertManager.showInvalidPasswordAlert(on: self)
+            return
+        }
+        
+        AuthService.shared.logInUser(with: loginRequest) { error in
+            if let error = error {
+                AlertManager.showSignInErrorAlert(on: self, with: error)
+                return
+            }
+            
+            if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                sceneDelegate.checkAuthentification()
+            }
+        }
     }
     
     //MARK: - ConfigureConstraints
