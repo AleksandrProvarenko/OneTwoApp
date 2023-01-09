@@ -28,12 +28,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func checkAuthentification() {
         if Auth.auth().currentUser == nil {
             let controller = LoginViewController()
-            let navigation = UINavigationController(rootViewController: controller)
+            let navigation = controller
             navigation.modalPresentationStyle = .fullScreen
             self.window?.rootViewController = navigation
         } else {
             let controller = MainTabBarViewController()
-            let navigation = UINavigationController(rootViewController: controller)
+            let navigation = controller
             navigation.modalPresentationStyle = .fullScreen
             self.window?.rootViewController = navigation
         }
